@@ -49,4 +49,16 @@ $(document).ready(function() {
         }
         
     });
+
+    $("input[name='themeSelect']").change(function() {
+        let theme = $(this).val();
+
+        $("body").removeClass(function(index, className) {
+            return (className.match (/(^|\s)theme-\S+/g) || []).join(' ');
+        });
+
+        if (theme !== "default") {
+            $("body").addClass("theme-" + theme);
+        }
+    });
 });
