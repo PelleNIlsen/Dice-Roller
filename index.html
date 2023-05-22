@@ -12,6 +12,15 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
+                <div class="dropdown float-right">
+                    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a href="#" class="dropdown-item" data-toggle="modal" data-target="#settingsModal">Settings</a>
+                    </div>
+                </div>
+
                 <h5 class="card-title">Dice Roller</h5>
 
                 <form>
@@ -32,17 +41,34 @@
                         </select>
                     </div>
 
-                    <div class="form-group form-check">
-                        <input type="checkbox" name="toggleAnimations" checked id="toggleAnimations" class="form-check-input">
-                        <label for="toggleAnimations" class="form-check-label">Enable animations</label>
-                    </div>
-
                     <button type="button" class="btn btn-primary btn-block" id="btnRoll">ROLL</button>
                 </form>
 
                 <div id="rolls" class="mt-4">
                     <div id="sum" class="alert alert-primary" role="alert"></div>
                     <div id="dice-rolls" class="row"></div>
+                </div>
+
+                <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" name="toggleAnimations" checked id="toggleAnimations" class="form-check-input">
+                                    <label for="toggleAnimations" class="form-check-label">Enable animations</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
