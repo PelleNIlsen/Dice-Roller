@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Dice Roller</h5>
+
+                <form>
+                    <div class="form-group">
+                        <label for="numNum">How many dice are you rolling?</label>
+                        <input type="number" name="numNum" id="numNum" value="2" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="diceSides">What dice are you rolling?</label>
+                        <select name="diceSides" id="diceSides" class="form-control">
+                            <option value="4">d4</option>
+                            <option value="6">d6</option>
+                            <option value="8">d8</option>
+                            <option value="10">d10</option>
+                            <option value="12">d12</option>
+                            <option value="20">d20</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-block" id="btnRoll">ROLL</button>
+                </form>
+
+                <div id="rolls" class="mt-4">
+                    <div id="sum" class="alert alert-primary" role="alert"></div>
+                    <div id="dice-rolls" class="row"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
